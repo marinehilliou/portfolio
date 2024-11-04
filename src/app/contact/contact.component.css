@@ -71,6 +71,12 @@
     font-family: 'PT Sans', sans-serif;
 }
 
+.mandatory-field {
+  font-size: 0.8rem;
+  font-family: 'PT Sans', sans-serif;
+  font-style: italic;
+}
+
 .consent-checkbox {
     display: flex;
     align-items: center;
@@ -98,7 +104,7 @@
 
 .contact-info {
     text-align: left;
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 
 .contact-item {

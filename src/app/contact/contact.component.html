@@ -2,20 +2,23 @@
   <h1 class="contact-title">Contactez-moi</h1>
 
   <div class="contact-form-container">
-    <form class="contact-form">
+    <form class="contact-form" action="https://formspree.io/f/myzyeaqp" method="POST">
       <div class="form-row">
-        <input type="text" placeholder="Nom" class="form-input">
-        <input type="text" placeholder="Prénom" class="form-input">
+        <input type="text" name="nom" placeholder="Nom *" class="form-input" required>
+        <input type="text" name="prenom" placeholder="Prénom *" class="form-input" required>
       </div>
       <div class="form-row">
-        <input type="email" placeholder="E-mail" class="form-input">
-        <input type="tel" placeholder="Téléphone" class="form-input">
+        <input type="email" name="email" placeholder="E-mail *" class="form-input" required>
+        <input type="tel" name="telephone" placeholder="Téléphone" class="form-input">
       </div>
-      <input type="text" placeholder="Objet" class="form-objet">
-      <textarea placeholder="Message" class="form-textarea"></textarea>
+      <input type="text" name="objet" placeholder="Objet *" class="form-objet" required>
+      <textarea name="message" placeholder="Message *" class="form-textarea" required></textarea>
       <div class="consent-checkbox">
-        <input type="checkbox" id="consent" class="checkbox-input">
-        <label for="consent" class="checkbox-label">J’accepte le traitement des données</label>
+        <p class="mandatory-field">* Champ obligatoire</p>
+      </div>
+      <div class="consent-checkbox">
+        <input type="checkbox" id="consent" class="checkbox-input" required>
+        <label for="consent" class="checkbox-label">J’accepte le traitement des données *</label>
       </div>
       <button type="submit" class="submit-button">Envoyer</button>
     </form>
