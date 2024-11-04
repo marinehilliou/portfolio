@@ -1,0 +1,54 @@
+.home {
+    background-image: url('/assets/images/background.jpg'); /* Remplace par ton image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+  .home-content h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Amiri', sans-serif;
+  }
+  
+  .home-content h2 {
+    font-size: 2rem;
+    margin: 10px 0 50px;
+    font-weight: 500;
+    font-family: 'Bad Script', sans-serif;
+  }
+  
+  button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #262626; /* Couleur de fond du bouton */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'PT Sans', sans-serif; /* Utilise ta police PT Sans */
+  }
+  
+  button:hover {
+    background-color: #363636; /* Couleur de fond au survol */
+    transform: scale(1.05); /* Légère agrandissement au survol */
+  }
+  
+  button:focus {
+    outline: none; /* Supprime le contour de focus */
+  }
+  
+  button:active {
+    background-color: #363636; /* Couleur de fond au clic */
+  }
+  

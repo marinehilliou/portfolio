@@ -1,0 +1,91 @@
+.skills-section {
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .skills-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    margin-bottom: 40px;
+  }
+
+  .skills-subtitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #000000;
+    text-align: center;
+  }
+
+  .skills-content {
+    display: flex;
+    gap: 130px;
+    align-items: flex-start;
+  }
+
+  .skills-bars {
+    width: 50%;
+    text-align: left;
+  }
+
+  .skill {
+    margin-bottom: 20px;
+  }
+
+  .skill-name {
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 6px;
+  }
+
+  .progress {
+    background-color: #262626;
+    height: 100%;
+    width: 0;
+    transition: width 1s ease-in-out;
+  }
+
+  .animate-progress .progress {
+    width: 0;
+  }
+
+  .show-progress .progress {
+    width: var(--progress-width);
+  }
+
+  .cv-download {
+    width: 50%;
+  }
+
+  .cv-image {
+    max-width: 80%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #262626;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .btn-download:hover {
+    background-color: #363636;
+  }
