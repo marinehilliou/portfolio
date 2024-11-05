@@ -52,11 +52,54 @@ html {
     scroll-behavior: smooth;
 }*/
 /* Styles du menu pour les écrans larges */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 30px 50px;
+  z-index: 10;
+  font-family: 'PT Sans', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
 nav ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
   margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1rem;
+  text-transform: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #464646;
+}
+
+
+nav.transparent {
+  background-color: transparent;
+}
+
+nav.scrolled {
+  background-color: rgba(38, 38, 38, 0.9);
+}
+
+body {
+  padding-top: 50px;
+}
+
+.section {
+  padding: 60px;
 }
 
 .menu-toggle {
@@ -79,28 +122,29 @@ nav ul {
     padding: 15px;
   }
 
-  /* Cache le menu standard et affiche le bouton hamburger */
-  .nav-links {
-    display: none;
+  nav ul {
+    display: none; /* Caché par défaut */
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    position: absolute;
-    top: 60px;
+    position: fixed;
+    top: 0;
     left: 0;
     background-color: rgba(38, 38, 38, 0.9);
+    font-family: 'PT Sans', sans-serif;
+    height: 100vh;
+    padding-top: 60px;
   }
 
-  .nav-links li {
-    text-align: center;
-    margin: 15px 0;
+  nav ul.active {
+    display: flex; /* Affiche le menu lorsque la classe active est ajoutée */
+  }
+
+  nav ul li {
+    margin: 20px 0;
   }
 
   .menu-toggle {
     display: block;
-  }
-
-  /* Affiche le menu en appuyant sur l'icône hamburger */
-  .menu-toggle.active + .nav-links {
-    display: flex;
   }
 }

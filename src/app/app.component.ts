@@ -34,9 +34,15 @@ export class AppComponent implements AfterViewInit {
       });
     });
 
-    document.getElementById('mobile-menu')?.addEventListener('click', function () {
-      this.classList.toggle('active');
-      document.querySelector('.nav-links')?.classList.toggle('active');
+    document.addEventListener("DOMContentLoaded", function() {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav ul");
+
+      // @ts-ignore
+      menuToggle.addEventListener("click", function() {
+        // @ts-ignore
+        nav.classList.toggle("active");
+      });
     });
   }
 }
