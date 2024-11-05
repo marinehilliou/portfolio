@@ -93,3 +93,47 @@
   font-size: 0.8rem;
   padding: 20px;
 }
+
+/* Styles pour les petits écrans (mobiles) */
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 40px 10px;
+  }
+
+  .portfolio-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .portfolio-intro {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .portfolio-grid {
+    display: flex;
+    flex-direction: column; /* Empile les éléments */
+    gap: 40px; /* Réduit l'espace entre les projets */
+    align-items: center; /* Centre les projets */
+  }
+
+  .portfolio-item {
+    width: 90%; /* Utilise une grande partie de la largeur disponible */
+  }
+
+  .portfolio-projectTitle {
+    font-size: 1rem; /* Réduit la taille du titre */
+    margin-top: 8px;
+  }
+
+  .portfolio-projectDescription {
+    font-size: 0.9rem; /* Réduit la taille de la description */
+    margin-top: 5px;
+  }
+
+  .portfolio-projectOverlay {
+    font-size: 0.75rem; /* Réduit la taille de l'overlay */
+    padding: 15px;
+  }
+}
+
