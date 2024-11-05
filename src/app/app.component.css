@@ -105,6 +105,7 @@ body {
 .menu-toggle {
   display: none;
   cursor: pointer;
+  margin-left: auto;
 }
 
 .menu-toggle .bar {
@@ -138,10 +139,6 @@ body {
 
   nav ul.active {
     display: flex; /* Affiche le menu lorsque la classe active est ajoutée */
-  }
-
-  nav ul li {
-    margin: 20px 0;
   }
 
   .menu-toggle {
