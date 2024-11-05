@@ -1,54 +1,74 @@
 .home {
-    background-image: url('/assets/images/background.jpg'); /* Remplace par ton image */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+  background-image: url('/assets/images/background.jpg'); /* Remplace par ton image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'Amiri', sans-serif;
+}
+
+.home-content h2 {
+  font-size: 2rem;
+  margin: 10px 0 50px;
+  font-weight: 500;
+  font-family: 'Bad Script', sans-serif;
+}
+
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #262626; /* Couleur de fond du bouton */
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: 'PT Sans', sans-serif; /* Utilise ta police PT Sans */
+}
+
+button:hover {
+  background-color: #363636; /* Couleur de fond au survol */
+  transform: scale(1.05); /* Légère agrandissement au survol */
+}
+
+button:focus {
+  outline: none; /* Supprime le contour de focus */
+}
+
+button:active {
+  background-color: #363636; /* Couleur de fond au clic */
+}
+
+@media (max-width: 768px) {
+  .home {
+    height: auto; /* Permet à la section de s'adapter à son contenu */
+    padding: 40px 20px; /* Ajoute un padding pour éviter que le texte soit collé aux bords */
   }
 
   .home-content h1 {
-    font-size: 3rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-family: 'Amiri', sans-serif;
+    font-size: 2.5rem; /* Réduit la taille du texte pour les petits écrans */
   }
-  
+
   .home-content h2 {
-    font-size: 2rem;
-    margin: 10px 0 50px;
-    font-weight: 500;
-    font-family: 'Bad Script', sans-serif;
+    font-size: 1.5rem; /* Réduit la taille du texte pour les petits écrans */
+    margin: 10px 0 30px; /* Ajuste la marge */
   }
-  
+
   button {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #262626; /* Couleur de fond du bouton */
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    font-family: 'PT Sans', sans-serif; /* Utilise ta police PT Sans */
+    padding: 10px 20px; /* Réduit le padding du bouton pour les petits écrans */
+    font-size: 14px; /* Réduit la taille de la police du bouton */
   }
-  
-  button:hover {
-    background-color: #363636; /* Couleur de fond au survol */
-    transform: scale(1.05); /* Légère agrandissement au survol */
-  }
-  
-  button:focus {
-    outline: none; /* Supprime le contour de focus */
-  }
-  
-  button:active {
-    background-color: #363636; /* Couleur de fond au clic */
-  }
-  
+}
