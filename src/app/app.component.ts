@@ -19,6 +19,8 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit() {
     // Ajoute le comportement de défilement en douceur après l'initialisation de la vue
     const menuLinks = document.querySelectorAll('nav ul li a[href^="#"]');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav ul');
 
     menuLinks.forEach((link) => {
       link.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
@@ -32,16 +34,15 @@ export class AppComponent implements AfterViewInit {
             behavior: 'smooth'
           });
         }
+
+        if (nav) {
+          nav.classList.remove("active");
+        }
       });
     });
 
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-    }
+    menuToggle?.addEventListener("click", () => {
+      nav?.classList.toggle("active");
+    });
   }
 }

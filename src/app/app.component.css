@@ -112,7 +112,7 @@ body {
   display: block;
   width: 25px;
   height: 3px;
-  margin: 5px auto;
+  margin: 5px 0;
   background-color: white;
   transition: all 0.3s;
 }
@@ -134,11 +134,14 @@ body {
     background-color: rgba(38, 38, 38, 0.9);
     font-family: 'PT Sans', sans-serif;
     height: 100vh;
-    padding-top: 60px;
   }
 
   nav ul.active {
     display: flex; /* Affiche le menu lorsque la classe active est ajoutée */
+  }
+
+  nav ul li {
+    margin: 20px 0;
   }
 
   .menu-toggle {
