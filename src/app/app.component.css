@@ -1,4 +1,4 @@
-nav {
+/*nav {
     position: fixed;
     top: 0;
     right: 0;
@@ -50,4 +50,57 @@ body {
 
 html {
     scroll-behavior: smooth;
+}*/
+/* Styles du menu pour les écrans larges */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+/* Styles pour les écrans plus petits */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px;
+  }
+
+  /* Cache le menu standard et affiche le bouton hamburger */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: rgba(38, 38, 38, 0.9);
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Affiche le menu en appuyant sur l'icône hamburger */
+  .menu-toggle.active + .nav-links {
+    display: flex;
+  }
 }
