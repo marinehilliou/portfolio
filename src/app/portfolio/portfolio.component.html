@@ -5,7 +5,7 @@
 
     <div class="portfolio-grid">
         <!-- Projet 1 -->
-        <div class="portfolio-item hidden">
+        <div class="portfolio-item hidden" (click)="toggleDescription($event)">
             <!--<a href="https://github.com/marinehilliou/marinehilliou.github.io" target="_blank" class="portfolio-link">-->
                 <div class="portfolio-image">
                     <img src="/assets/images/projet1.png" alt="Projet 1">
@@ -15,6 +15,7 @@
                 </div>
                 <p class="portfolio-projectTitle">QuickPlay</p>
                 <p class="portfolio-projectDescription">Application de mini-jeux avec plusieurs modes et jeux amusants</p>
+                <p *ngIf="isDescriptionVisible" class="portfolio-description-mobile">QuickPlay est une application de mini-jeux développée durant ma formation et approfondie ensuite. Elle propose deux modes de jeu : solo et multijoueur, avec divers jeux comme des quiz sur les drapeaux, un jeu type Fruit Ninja, et un jeu type 2048.<br><br>Langage utilisé: Kotlin</p>
             <!--</a>-->
         </div>
 

@@ -59,6 +59,16 @@
   transition: opacity 0.3s ease;
 }
 
+.portfolio-description-mobile {
+  display: none;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.portfolio-item.show-description .portfolio-description-mobile {
+  display: block;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -134,6 +144,10 @@
   .portfolio-projectOverlay {
     font-size: 0.75rem; /* Réduit la taille de l'overlay */
     padding: 15px;
+  }
+
+  .portfolio-item:hover .overlay {
+    opacity: 1;
   }
 }
 

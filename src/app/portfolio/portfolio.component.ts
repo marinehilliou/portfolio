@@ -7,10 +7,19 @@ import { Component, AfterViewInit, ElementRef } from '@angular/core';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements AfterViewInit {
+
+  isDescriptionVisible = false;
+
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  toggleDescription(event: Event) {
+    if (window.innerWidth <= 768) { // Vérifie si on est sur mobile (ex: 768px)
+      this.isDescriptionVisible = !this.isDescriptionVisible;
     }
   }
 
