@@ -1,10 +1,10 @@
-import { Component, AfterViewInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
-import { SkillsComponent } from './skills/skills.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ContactComponent } from './contact/contact.component';
+import {Component, AfterViewInit} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {HomeComponent} from './home/home.component';
+import {ProfileComponent} from './profile/profile.component';
+import {SkillsComponent} from './skills/skills.component';
+import {PortfolioComponent} from './portfolio/portfolio.component';
+import {ContactComponent} from './contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +15,7 @@ import { ContactComponent } from './contact/contact.component';
 })
 export class AppComponent implements AfterViewInit {
   title = 'SitePortfolio';
+
   ngAfterViewInit() {
     // Ajoute le comportement de défilement en douceur après l'initialisation de la vue
     const menuLinks = document.querySelectorAll('nav ul li a[href^="#"]');
@@ -34,15 +35,13 @@ export class AppComponent implements AfterViewInit {
       });
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
-      const menuToggle = document.querySelector(".menu-toggle");
-      const nav = document.querySelector("nav ul");
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-      // @ts-ignore
-      menuToggle.addEventListener("click", function() {
-        // @ts-ignore
-        nav.classList.toggle("active");
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
       });
-    });
+    }
   }
 }
