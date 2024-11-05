@@ -73,3 +73,42 @@
   font-family: 'PT Sans', sans-serif;
   font-weight: 300;
 }
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+  .profile-content {
+    flex-direction: column; /* Change l'orientation en colonne */
+    gap: 20px; /* Réduit l'espace entre l'image et la description */
+  }
+
+  .profile-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-image img {
+    margin: 0 auto; /* Centre l'image dans le conteneur */
+    max-width: 70%;
+  }
+
+  .profile-description {
+    max-width: 100%; /* Permet à la description de prendre toute la largeur */
+  }
+
+  .profile-title {
+    font-size: 1.5rem; /* Réduit la taille du titre */
+  }
+
+  .about-me-banner {
+    height: auto; /* Permet à la bannière de s'adapter à son contenu */
+    padding: 20px 0; /* Ajoute du padding */
+  }
+
+  .about-me-banner h1 {
+    font-size: 1.5rem; /* Réduit la taille du texte */
+  }
+
+  .about-me-banner h2 {
+    font-size: 1.2rem; /* Réduit la taille du texte */
+  }
+}
